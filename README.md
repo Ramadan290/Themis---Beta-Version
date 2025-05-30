@@ -110,7 +110,7 @@ themis/
 - MongoDB running locally or hosted (URI in `.env`)
 - Create `.env` file with:
 
-- 
+ 
 ### 🚀 Run Backend
 ```bash
 cd themis
@@ -118,12 +118,12 @@ uvicorn app.main:app --reload
 
 
 http://127.0.0.1:8000/
+---------------------------------------------------------------
 
+### 🧪 Notes
+ - This beta release uses machine learning models only — deep learning will be used in the refined release.
 
-🧪 Notes
-This beta release uses machine learning models only — deep learning will be used in the refined release.
-
-MongoDB is used for all collections, including: users, attendance, payroll, news, status, and skills.
+ - MongoDB is used for all collections, including: users, attendance, payroll, news, status, and skills.
 
 
 
