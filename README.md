@@ -1,7 +1,7 @@
 # Themis – Beta Version
 
 **Themis** is a Human Resource Management System (HRMS) that combines secure authentication, employee management, and AI-driven analytics to help organizations manage their teams effectively.  
-This repository represents the **Beta Version**, designed as the first functional release before a planned upgrade with deeper AI integration and structured SQL-backed storage.
+This repository represents the **Beta Version**, designed as the first functional release before a planned upgrade with deeper AI integration and structured SQL-backed storage
 
 > ⚠️ A **refined version** is coming soon and will feature:
 > - More advanced **deep learning models**.
