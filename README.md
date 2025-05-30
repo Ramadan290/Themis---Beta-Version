@@ -126,4 +126,20 @@ http://127.0.0.1:8000/
  - MongoDB is used for all collections, including: users, attendance, payroll, news, status, and skills.
 
 
+Preview :
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/91849619-ede9-4b68-99e4-da8116c2fd13" />
+<img width="949" alt="image" src="https://github.com/user-attachments/assets/b6796233-ef9d-4151-8ad4-bb1a31599b83" />
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/3689813e-f155-45a1-9a8e-48bb4311e24b" />
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/657fcc2f-ab2f-4e20-b718-e0bcf7994e56" />
+<img width="946" alt="image" src="https://github.com/user-attachments/assets/9283fd31-fbe2-4a78-ab0c-d4e3c4c79034" />
+<img width="945" alt="image" src="https://github.com/user-attachments/assets/310b9a51-3434-4ed9-b8a6-50fc14e1fdc3" />
+<img width="935" alt="image" src="https://github.com/user-attachments/assets/131a0466-6235-453a-a01c-104d0f03971f" />
+<img width="948" alt="image" src="https://github.com/user-attachments/assets/a15b5888-e7b4-4a43-ba36-5034e1a51232" />
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/77ba1f42-0bd3-4990-8832-3e39e2ee2a66" />
+<img width="946" alt="image" src="https://github.com/user-attachments/assets/bea51cfd-99b7-4624-82a5-9e3e003ee481" />
+<img width="946" alt="image" src="https://github.com/user-attachments/assets/8730aaf2-119a-4792-bb83-155da48a29ca" />
+<img width="944" alt="image" src="https://github.com/user-attachments/assets/ec1c7380-1243-42b3-9d3f-fe760185a4ec" />
+<img width="944" alt="image" src="https://github.com/user-attachments/assets/e5e1caa9-c19c-437d-9bef-49c7a8b22db3" />
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/d6dad4b0-e814-4f74-9ef3-cd2bd94fb6ca" />
 
