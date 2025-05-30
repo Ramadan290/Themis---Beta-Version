@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Decentralization</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Decentralization</h1>
+
+        <!-- Predict Department Change Section -->
+        <button class="toggle-btn" onclick="toggleSection('predictDepartmentSection')">Predict Employee Department</button>
+        <div id="predictDepartmentSection" class="section">
+            <label for="decentralizationUsername">Enter Employee Username:</label>
+            <input type="text" id="decentralizationUsername" placeholder="e.g., fatima_abdel">
+            <button onclick="predictDepartment()">Predict Department</button>
+            <div id="departmentPredictionResult"></div>
+        </div>
+
+        <!-- HR Approval Section (Only shows after prediction) -->
+        <div id="hrApprovalSection" class="section" style="display: none;">
+            <h3>HR Approval for Department Change</h3>
+            <p><strong>Current Department:</strong> <span id="currentDepartment">-</span></p>
+            <p><strong>Suggested Department:</strong> <span id="suggestedDepartment">-</span></p>
+            <p><strong>Do you want to approve this change?</strong></p>
+            <button onclick="updateDepartment(true)">Approve</button>
+            <button onclick="updateDepartment(false)">Reject</button>
+            <div id="approvalMessage"></div>
+        </div>
+
+        <br>
+        <button onclick="window.location.href='../Menu.html'">Back to Main Menu</button>
+    </div>
+
+    <div id="raiseModal" class="modal">
+        <div class="modal-content">
+            <p id="raise-modal-message"></p>
+        </div>
+    </div>
+
+    <script src="dec.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+News API Testing Endpoints
+
+1. Add News
+
+Endpoint:POST /add
+
+Body (form-data):
+
+title: "Breaking News"
+
+content: "This is the content of the news article."
+
+author: "John Doe"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Get All News Articles
+
+Endpoint:GET /get
+
+(No request body needed)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Get News by ID
+
+Endpoint:GET /get/{news_id}
+
+Example URL:GET /get/NEWS123456
+
+(No request body needed)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Update News Article
+
+Endpoint:PUT /update/{news_id}
+
+Example URL:PUT /update/NEWS123456
+
+Body (form-data):
+
+title: "Updated News Title"
+
+content: "Updated content of the news article."
+
+author: "Jane Doe"
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+5. Delete News Article
+
+Endpoint:DELETE /delete/{news_id}
+
+Example URL:DELETE /delete/NEWS123456
+
+(No request body needed)
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+6. Add Comment to News Article
+
+Endpoint:PUT /comment/{news_id}
+
+Example URL:PUT /comment/NEWS123456
+
+Body (form-data):
+
+comment_content: "This is a comment on the news article."
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+7. Delete Specific Comment
+
+Endpoint:DELETE /comment/{news_id}/delete/{comment_id}
+
+Example URL:DELETE /comment/NEWS123456/delete/COMMENT7890
+
+(No request body needed)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+8. Retrieve News with Comments
+
+Endpoint:GET /get/{news_id}
+
+Example URL:GET /get/NEWS123456
+
+(No request body needed)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------

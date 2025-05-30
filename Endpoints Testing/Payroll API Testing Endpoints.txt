@@ -1,0 +1,77 @@
+Payroll API Testing Endpoints
+
+1. Create Payroll Entry
+
+Endpoint:POST /add
+
+Body (raw JSON):
+
+{
+    "salary": 5000,
+    "bonus": 500,
+    "deductions": 200
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Get Payroll by Employee Username
+
+Endpoint:GET /get
+
+Headers:
+
+Authorization: "Bearer your_access_token_here"
+
+(No request body needed)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3. Update Payroll by Employee Username
+
+Endpoint:PUT /update
+
+Body (raw JSON):
+
+{
+    "salary": 5500,
+    "bonus": 600,
+    "deductions": 250
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Delete Payroll by Employee Username
+
+Endpoint:DELETE /delete
+
+Headers:
+
+Authorization: "Bearer your_access_token_here"
+
+(No request body needed)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Request a Raise
+
+Endpoint:POST /raise-request
+
+Body (form-data):
+
+requested_amount: 1000
+
+reason: "Performance improvement"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+6. Approve or Reject Raise Request
+
+Endpoint:PUT /raise-request/approval/{raise_request_id}
+
+Example URL:PUT /raise-request/approval/RAISE123456
+
+Body (form-data):
+
+action: "accept"

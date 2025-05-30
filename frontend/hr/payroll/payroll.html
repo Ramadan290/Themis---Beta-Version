@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Payroll Management</title>
+    <link rel="icon" href="icon2.png" type="image/jpg">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h1>HR Payroll Management</h1>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <input type="text" id="usernameFilter" placeholder="Search by username">
+        <input type="number" id="minSalaryFilter" placeholder="Min Salary">
+        <input type="number" id="maxSalaryFilter" placeholder="Max Salary">
+        <button onclick="fetchPayrolls()">Apply Filters</button>
+        <button id="collapseButton" onclick="hideSalaries()" style="display: none;">Hide Results</button>
+    </div>
+
+    <!-- Payroll Table -->
+    <table class="salary-column">
+        <thead >
+            <tr >
+                <th>Username</th>
+                <th>Salary</th> 
+                <th>Benefits</th>
+                <th>Appraisals</th>
+                <th>Penalties</th>
+            </tr>
+        </thead>
+        <tbody id="payrollTableBody">
+            <!-- Payroll data will be inserted here dynamically -->
+        </tbody>
+    </table>
+
+
+    <div class="separator"></div>
+
+
+    <h2>Raise Requests</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Request ID</th>
+                <th>Username</th>
+                <th>Amount</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="raiseRequestsTableBody">
+        </tbody>
+    </table>
+
+
+    <div class="separator"></div>
+
+    <!-- HR Actions Section -->
+    <h2>HR Actions</h2>
+    <div class="update-section">
+        <!-- Update Salary -->
+        <div>
+            <h3>Update Salary</h3>
+            <input type="text" id="salaryEmployeeId" placeholder="Employee ID">
+            <input type="number" id="newSalary" placeholder="New Salary">
+            <button onclick="updateSalary()">💾 Update Salary</button>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Add Appraisal -->
+        <div>
+            <h3>Add Appraisal</h3>
+            <input type="text" id="appraisalEmployeeId" placeholder="Employee ID">
+            <input type="number" id="appraisalAmount" placeholder="Amount">
+            <input type="date" id="appraisalDate">
+            <button onclick="addAppraisal()">➕ Add Appraisal</button>
+        </div>
+        <div class="separator"></div>
+
+        <!-- Add Penalty -->
+        <div>
+            <h3>Add Penalty</h3>
+            <input type="text" id="penaltyEmployeeId" placeholder="Employee ID">
+            <input type="number" id="penaltyAmount" placeholder="Amount">
+            <input type="text" id="penaltyReason" placeholder="Reason">
+            <button onclick="addPenalty()">➕ Add Penalty</button>
+        </div>
+    </div>
+    <div class="separator"></div>
+
+
+    <div id="raiseModal" class="modal">
+        <div class="modal-content">
+            <p id="raise-modal-message"></p>
+        </div>
+    </div>
+
+    <script src="payroll.js"></script> 
+</body>
+</html>

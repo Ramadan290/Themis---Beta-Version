@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Attendance Management</title>
+    <script src="attendance.js" defer></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <h2>HR Attendance Management</h2>
+
+    <div>
+        <label for="filter-date">Date:</label>
+        <input type="date" id="filter-date">
+
+        <label for="filter-username">Employee Username:</label>
+        <input type="text" id="filter-username" placeholder="Enter username">
+
+        <label for="filter-status">Status:</label>
+        <select id="filter-status">
+            <option value="">All</option>
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+            <option value="Late">Late</option>
+        </select>
+        <button onclick="filterHRAttendance()">Filter</button>
+    </div>
+    <button id="attendanceToggle" class="collapsible" onclick="toggleAttendance()">▶ Show Results</button>
+
+    <div id="attendanceSection" class="content">
+        <table>
+            <thead>
+                <tr>
+                    <th>Attendance ID</th>
+                    <th>Employee</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Sick Note Status</th>
+                </tr>
+            </thead>
+            <tbody id="hrAttendanceRecordsElement">
+                <tr><td colspan="5">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="separator"></div>
+
+    <h2>Pending Sick Notes</h2>
+    <button id="sickNotesToggle" class="collapsible" onclick="toggleSickNotes()">▶ Show</button>
+    <div id="sickNotesSection" class="content">
+        <div id="pending-sick-notes">
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <div id="raiseModal" class="modal">
+        <div class="modal-content">
+            <p id="raise-modal-message"></p>
+        </div>
+    </div>
+
+
+
+<!-- Modal Structure -->
+<div id="reviewModal" class="modal">
+  <div class="modal-content">
+    <h2>Enter Reason and Review Comments</h2>
+    <label for="reason">Reason:</label>
+    <input type="text" id="reason" placeholder="Enter reason here">
+
+    <label for="reviewComments">Review Comments:</label>
+    <textarea id="reviewComments" placeholder="Enter review comments here"></textarea>
+
+    <div class="modal-buttons">
+      <button id="submitReview">Submit</button>
+      <button id="closeModal">Cancel</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

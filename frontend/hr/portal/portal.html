@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Portal</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="/frontend/Media/icons/icon2.png" type="image/jpg">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <header class="portal-header">
+    <h1>Welcome, <span id="username">Employee</span></h1>
+    <img src="/frontend/Media/icons/icon2.png" alt="Company Logo" class="header-logo">
+    <button id="logout-button">Logout</button>
+</header>
+
+  <main class="portal-container">
+    <div class="portal-box" id="payroll-box">
+      <button class="button-85" role="button">Payroll</button>
+    </div>
+    <div class="portal-box" id="attendance-box">
+      <button class="button-85" role="button">Attendance</button>
+    </div>
+    <div class="portal-box" id="news-box">
+      <button class="button-85" role="button">News</button>
+    </div>
+    <div class="portal-box" id="status-box">
+      <button class="button-85" role="button">Status</button>
+    </div>
+    <div class="portal-box" id="ai-box">
+      <button class="button-85" role="button">AI Analytics (BETA)</button>
+    </div>
+  </main>
+
+  <script src="portal.js"></script>
+</body>
+</html>

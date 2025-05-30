@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Well-Being</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Well-Being Analysis</h1>
+
+        <!-- Well-Being Prediction Section -->
+        <button class="toggle-btn" onclick="toggleSection('wellBeingSection')">Predict Employee Well-Being</button>
+        <div id="wellBeingSection" class="section">
+            <label for="wellBeingUsername">Enter Employee Username:</label>
+            <input type="text" id="wellBeingUsername" placeholder="e.g., fatima_abdel">
+            <button onclick="predictWellBeing()">Predict</button>
+            <div id="predictionResult"></div>
+        </div>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+        <!-- Fetch Employee Data Section -->
+        <button class="toggle-btn" onclick="toggleSection('employeeDataSection')">Employee Data</button>
+        <div id="employeeDataSection" class="section">
+            <label for="employeeUsername">Enter Employee Username:</label>
+            <input type="text" id="employeeUsername" placeholder="e.g., fatima_abdel">
+            <button onclick="fetchEmployeeData()">Fetch Data</button>
+            <div id="employeeData"></div>
+        </div>
+        <br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <!-- Fetch All Employees Section -->
+        <button class="toggle-btn" onclick="toggleSection('allEmployeesSection')">View All Employees</button>
+        <div id="allEmployeesSection" class="section">
+            <button onclick="fetchAllEmployees()">Fetch All Employees</button>
+            <div id="allEmployees"></div>
+        </div>
+
+        <br>
+        <button onclick="window.location.href='../Menu.html'">Back to Main Menu</button>
+    </div>
+
+    <div id="raiseModal" class="modal">
+        <div class="modal-content">
+            <p id="raise-modal-message"></p>
+        </div>
+    </div>
+
+    <script src="EWB.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payroll</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <h1>Payroll</h1>
+  </header>
+
+  <main>
+    <!-- Payroll Details Section -->
+    <section id="payroll-details">
+        <h2>Payroll Details</h2>
+        <p><strong>Salary:<br><br></strong> <span id="salary">Loading...</span></p>
+        
+        <h3>Benefits:</h3>
+        <ul id="benefits"></ul>
+      
+        <h3>Appraisals:</h3>
+        <div id="appraisals"></div>
+      
+        <h3>Penalties:</h3>
+        <div id="penalties"></div>
+      </section>
+
+    <!-- Request a Raise Section -->
+    <section id="raise-request">
+      <h2>Request a Raise</h2>
+      <form id="raise-form">
+        <label for="requested-amount">Requested Amount:</label>
+        <input type="number" id="requested-amount" name="requested-amount" step="0.01" required>
+
+        <label for="reason">Reason:</label>
+        <textarea id="reason" name="reason" required></textarea>
+        <br>
+        <br>
+
+
+        <button type="submit">Submit Request</button>
+        <p id="raise-message"></p><!-- Modal -->
+        <div id="raiseModal" class="modal">
+            <div class="modal-content">
+                <p id="raise-modal-message"></p>
+            </div>
+        </div>
+      </form>
+    </section>
+
+   <!-- Raise Request History Section -->
+<section id="raise-history">
+    <h2>Raise Request History</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Requested Amount</th>
+          <th>Reason</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="raise-requests">
+        <!-- Rows will be dynamically added -->
+      </tbody>
+    </table>
+  </section>
+  </main>
+
+  <script src="payroll.js"></script>
+</body>
+</html>

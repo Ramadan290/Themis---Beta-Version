@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <h1>Company News</h1>
+  </header>
+
+  <main>
+    <!-- News List -->
+    <section id="news-list">
+      <h2>All News Articles</h2>
+      <div id="news-container">
+        <!-- News articles will be dynamically added here -->
+      </div>
+    </section>
+<!-- Single News Article -->
+<section id="news-details" style="display: none;">
+  <h2 id="news-title"></h2>
+  <p id="news-content"></p>
+  <p><strong>Author:</strong> <span id="news-author"></span></p>
+  <p><strong>Published At:</strong> <span id="news-published-at"></span></p>
+  <p><strong>Last Updated:</strong> <span id="news-last-updated"></span></p>
+
+  <form id="comment-form">
+    <label for="comment-content">Add a Comment:</label>
+    <textarea id="comment-content" required></textarea>
+    <button type="submit">Submit Comment</button>
+  </form>
+
+        <!-- Comments Section -->
+        <div id="comments-section">
+          <h3>Comments</h3>
+          <ul id="comments-list">
+            <!-- Comments will be dynamically added here -->
+          </ul>
+  <!-- Container for the Back Button -->
+  <div id="back-button-container"></div>
+</section>
+
+
+
+      </div>
+    </section>
+  </main>
+
+  <script src="news.js"></script>
+</body>
+</html>

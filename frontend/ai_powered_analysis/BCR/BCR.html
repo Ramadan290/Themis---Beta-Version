@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCR Analysis</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Benefit-to-Cost-Ratio (BCR) Analysis</h1>
+
+        <!-- Predict BCR Section -->
+        <button class="toggle-btn" onclick="toggleSection('predictBCRSection')">Predict Employee BCR</button>
+        <div id="predictBCRSection" class="section">
+            <label for="bcrUsername">Enter Employee Username:</label>
+            <input type="text" id="bcrUsername" placeholder="e.g., fatima_abdel">
+            <button onclick="predictBCR()">Predict BCR</button>
+            <div id="bcrPredictionResult"></div>
+        </div>
+
+        <!-- Fetch Employee BCR Data Section -->
+        <button class="toggle-btn" onclick="toggleSection('employeeBCRDataSection')">Fetch Employee BCR Data</button>
+        <div id="employeeBCRDataSection" class="section">
+            <label for="employeeBCRUsername">Enter Employee Username:</label>
+            <input type="text" id="employeeBCRUsername" placeholder="e.g., fatima_abdel">
+            <button onclick="fetchEmployeeBCRData()">Fetch BCR Data</button>
+            <div id="employeeBCRData"></div>
+        </div>
+
+        <!-- Fetch All Employees BCR Data Section -->
+        <button class="toggle-btn" onclick="toggleSection('allEmployeesBCRSection')">View All Employees BCR Data</button>
+        <div id="allEmployeesBCRSection" class="section">
+            <button onclick="fetchAllEmployeesBCR()">Fetch All Employees</button>
+            <div id="allEmployeesBCR"></div>
+        </div>
+
+        <br>
+        <button onclick="window.location.href='../Menu.html'">Back to Main Menu</button>
+    </div>
+    <div id="raiseModal" class="modal">
+        <div class="modal-content">
+            <p id="raise-modal-message"></p>
+        </div>
+    </div>
+    <script src="BCR.js"></script>
+</body>
+</html>

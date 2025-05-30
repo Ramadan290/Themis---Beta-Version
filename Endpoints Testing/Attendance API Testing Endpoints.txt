@@ -1,0 +1,89 @@
+Attendance API Testing Endpoints :
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Add Attendance
+
+Endpoint: POST /add
+
+Body (raw JSON):
+
+{
+    "date": "2025-01-27",
+    "status": "Present",
+    "manual_entry": false,
+    "sick_note": null
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2. Get Attendance Records by Username
+
+Endpoint: GET /{username}
+
+Example URL:GET /john_doe
+
+(No request body needed)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Update Attendance Record
+
+Endpoint: PUT /{attendance_id}
+
+Example URL:PUT /123e4567-e89b-12d3-a456-426614174000
+
+Body (raw JSON):
+
+{
+    "date": "2025-01-27",
+    "status": "Absent",
+    "manual_entry": true,
+    "sick_note": {
+        "reason": "Medical emergency",
+        "submitted_at": "2025-01-26T15:30:00Z",
+        "file_name": "uploads/sick_note.pdf"
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Delete Attendance Record
+
+Endpoint: DELETE /{attendance_id}
+
+Example URL:DELETE /123e4567-e89b-12d3-a456-426614174000
+
+(No request body needed)
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+5. Manage Sick Note
+
+Endpoint: PUT /sick-note/{attendance_id}
+
+Example URL:PUT /sick-note/123e4567-e89b-12d3-a456-426614174000
+
+Body (form-data):
+
+reason: "Feeling unwell"
+
+sick_note: (Attach file)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+6. Log Attendance
+
+Endpoint: POST /log
+
+Body (form-data):
+
+token: "your_jwt_token_here"
+
+
+
+
+
+______________________________________________________________________________________________________________________________________

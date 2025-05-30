@@ -1,0 +1,57 @@
+Database: APOLLO
+
+Collections:
+
+1. users
+------------------------------
+- _id (ObjectId) - Primary Key
+- username (String) - Unique identifier for the user
+- hashed_password (String) - Encrypted password
+- role (String) - User role (e.g., "employee", "admin")
+
+2. payroll
+------------------------------
+- _id (ObjectId) - Primary Key
+- username (String) - Reference to users collection
+- salary (Decimal) - Employee salary amount
+- benefits (Array of Strings) - List of benefits (e.g., "Health Insurance")
+- appraisals (Array of Objects)
+  - rating (Float) - Appraisal rating score
+  - date (String) - Date of appraisal
+- penalties (Array of Objects)
+  - amount (Decimal) - Penalty amount
+  - reason (String) - Reason for penalty
+- raise_requests (Array of Objects)
+  - requested_amount (Decimal) - Requested salary increase amount
+  - reason (String) - Justification for raise
+  - status (String) - Status of raise request (e.g., "approved")
+  - requested_at (String) - Timestamp when raise was requested
+  - request_id (String) - Unique request identifier
+
+2. attendance
+------------------------------
+- _id (ObjectId) - Primary Key
+- attendance_id (String) - Unique attendance record identifier
+- username (String) - Reference to users collection
+- date (String) - Attendance date
+- status (String) - Present/Absent status
+- manual_entry (Boolean) - Indicates if entry was manually added
+- sick_note (Object)
+  - reason (String) - Reason for absence (if applicable)
+  - status (String) - Status of sick note (e.g., "Pending")
+  - review_comments (String) - Comments from HR
+  - file_name (String) - File path of attached document
+  - submitted_at (String) - Timestamp of sick note submission
+
+4. news
+------------------------------
+- _id (ObjectId) - Primary Key
+- news_id (String) - Unique news identifier
+- title (String) - News title
+- content (String) - News content
+- date (String) - Timestamp of news post
+- author (String) - Author of the news post
+- comments (Array of Objects)
+  - username (String) - Commenter username
+  - content (String) - Comment text
+  - date (String) - Timestamp of comment

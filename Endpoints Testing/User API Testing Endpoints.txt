@@ -1,0 +1,49 @@
+User API Testing Endpoints
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+1. Register User
+
+Endpoint:POST /register
+
+Body (raw JSON):
+
+{
+    "username": "newuser",
+    "password": "securepassword"
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Login
+
+Endpoint:POST /login
+
+Body (form-data):
+
+username: "newuser"
+
+password: "securepassword"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+3. Get Current User Info
+
+Endpoint:GET /users/me
+
+Headers:
+
+Authorization: "Bearer your_access_token_here"
+
+(No request body needed)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+4. Refresh Token
+
+Endpoint:POST /refresh_token
+
+Body (form-data):
+
+refresh_token: "your_refresh_token_here"
+

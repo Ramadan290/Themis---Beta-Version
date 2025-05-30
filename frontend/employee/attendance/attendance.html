@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="attendance-header">
+    <h1>Attendance</h1>
+    <button id="log-attendance-button">Log Attendance</button>
+  </header>
+
+  <main>
+    <section class="attendance-table">
+        <h2>Attendance Records</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Attendance ID</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Sick Note</th>
+            </tr>
+          </thead>
+          <tbody id="attendance-records">
+            <!-- Rows will be dynamically added here -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="sick-note-form">
+        <h2>Submit Sick Note</h2>
+        <form id="sick-note-form">
+            <label for="attendance-id">Attendance ID:</label>
+            <input type="text" id="attendance-id" name="attendance-id" required>
+    
+            <label for="reason">Reason:</label>
+            <textarea id="reason" name="reason" required></textarea>
+    
+            <label for="sick-note-file">Upload File (optional):</label>
+            <input type="file" id="sick-note-file" name="sick-note-file">
+    
+            <button type="submit">Submit</button>
+            <p id="sick-note-message"></p>
+        </form>
+    </section>
+    
+    <div id="raiseModal" class="modal">
+        <div class="modal-content">
+            <p id="raise-modal-message"></p>
+        </div>
+    </div>
+  </main>
+
+  <script src="attendance.js"></script>
+</body>
+</html>

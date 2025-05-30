@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="s_container">
+        <h2>Employee Information</h2>
+        <div class="s_info-box">
+            <p><strong>Name:</strong> <span id="name"></span></p>
+            <p><strong>Position:</strong> <span id="position"></span></p>
+            <p><strong>Department:</strong> <span id="department"></span></p>
+            <p><strong>Start Date:</strong> <span id="start_date"></span></p>
+            <p><strong>Status:</strong> <span id="status"></span></p>
+        </div>
+
+        <h3>Performance</h3>
+        <div class="s_info-box">
+            <p><strong>Task Completion Rate:</strong> <span id="completion_rate"></span>%</p>
+        </div>
+
+        <h3>Project Contributions</h3>
+        <div class="s_info-box">
+            <ul id="project_contributions"></ul>
+        </div>
+
+        <h3>Attendance</h3>
+        <div class="s_info-box">
+            <p><strong>Days Present:</strong> <span id="days_present"></span></p>
+            <p><strong>Days Absent:</strong> <span id="days_absent"></span></p>
+            <p><strong>Days Late:</strong> <span id="days_late"></span></p>
+        </div>
+
+        <h3>Payroll</h3>
+        <div class="s_info-box">
+            <p><strong>Salary:</strong> $<span id="salary"></span></p>
+            <p><strong>Total Appraisals:</strong> $<span id="total_appraisals"></span></p>
+            <p><strong>Total Penalties:</strong> $<span id="total_penalties"></span></p>
+        </div>
+    </div>
+
+    <script src="employee_status.js"></script>
+</body>
+</html>
