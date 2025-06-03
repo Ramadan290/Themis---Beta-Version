@@ -73,32 +73,6 @@ All models are trained using real-time API data fetched from MongoDB collections
 
 ---
 
-## 📁 Project Structure
-themis/
-├── app/
-│ ├── main.py # FastAPI initialization
-│ ├── auth.py # JWT and password logic
-│ ├── config.py # MongoDB setup
-│ ├── models.py # Pydantic schemas
-│ ├── routes/
-│ │ ├── authorization.py # Login, register, token refresh
-│ │ ├── attendance.py # Attendance CRUD + HR tools
-│ │ ├── payroll.py # Payroll CRUD + HR tools
-│ │ ├── news.py # News posting + comments
-│ │ ├── status.py # Employee analytics & HR overview
-│ │ └── classification_input.py # AI predictions
-├── ML/
-│ ├── BCR.py # Trains BCR model
-│ ├── DEC.py # Trains decentralization model
-│ ├── WELL_BEING.py # Trains well-being model
-├── frontend/
-│ ├── index.html # Landing page
-│ ├── login/ # Login UI
-│ ├── css/ # Stylesheets
-│ ├── js/ # Frontend logic
-├── uploads/ # Sick note files
-├── .env # MongoDB URI and secret keys
-
 Preview :
 <img width="947" alt="image" src="https://github.com/user-attachments/assets/91849619-ede9-4b68-99e4-da8116c2fd13" />
 <img width="949" alt="image" src="https://github.com/user-attachments/assets/b6796233-ef9d-4151-8ad4-bb1a31599b83" />
